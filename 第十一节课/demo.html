@@ -11,25 +11,40 @@
 			margin:0;
 			padding:0;
 		}
-
+		.dox{
+			position:absolute;
+			width:300px;
+			height:200px;
+			background-color:blue;
+		}
+		.dox1{
+			position:absolute;
+			left:0;
+			margin:auto;
+			width:200px;
+			height:100px;
+			background-color:green;
+		}
 		.dox2{
-			overflow:hidden;
 			width:100px;
-			line-height:100px;
-			font-size:0px;
+			height:100px;
 			background-color:blue;
 			transition:0.5s;
 		}
-		.dox2:hover{
-			width:500px;
+		.dox3:hover{
+			width:300px;
+			height:200px;
 			background-color:pink;
 		}
   </style>
  </head>
 
  <body>
-
-  <div class='dox2'>2312</div>
+  <div class='dox'>
+	<div class='dox1'>
+	</div>  
+  </div>
+  <div class='dox2'></div>
   <div class='dox3'></div>
  </body>
 </html>
