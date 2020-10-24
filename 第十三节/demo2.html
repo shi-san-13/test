@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> New Document </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ <style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			perspective:800px;
+		}
+		.stage{
+			position:relative;
+			width:300px;
+			height:300px;
+			margin:500px auto;
+			transform-style:preserve-3d;
+			transition:1s;
+		}
+		.stage:hover{
+			transform:rotatey(360deg);
+		}
+		.stage .face{
+			position:absolute;
+			top:0;
+			left:0;
+			width:300px;
+			height:300px;
+			border:1px solid black;
+			
+		}
+
+		.stage>.top{
+			transform-origin:top;
+			transform:translateZ(-150px) rotateX(90deg) ;
+			transition:1s;
+		}
+		.stage:hover .top{
+			transform:translateZ(-150px) rotateX(200deg) ;
+		}
+		.stage .bottom{
+			transform:rotateX(-90deg) translateZ(150px);
+		}
+		.stage .left{
+			transform:rotateY(-90deg) translateZ(150px);
+		}
+		.stage .right{
+			transform:rotateY(90deg) translateZ(150px);
+		}
+		.stage .front{
+			transform:translateZ(150px);
+		}
+		.stage .back{
+			transform:rotateY(180deg) translateZ(150px);
+		}
+
+		.stage .stage1{
+			position:absolute;
+			left:0;
+			right:0;
+			top:0;
+			bottom:0;
+			width:100px;
+			height:100px;
+			margin:auto;
+			transition:1s;
+		}
+		.stage .stage1 div{
+			position:absolute;
+			top:0;
+			left:0;
+			width:100px;
+			height:100px;
+			
+			border:1px solid blue;
+		}
+		.stage:hover .stage1{
+			transform:translateY(-200px);
+		}
+		.stage .stage1 .top{
+			transform:rotateX(90deg) translateZ(50px);
+		}
+		.stage .stage1 .bottom{
+			transform:rotateX(-90deg) translateZ(50px);
+		}
+		.stage .stage1 .left{
+			transform:rotateY(-90deg) translateZ(50px);
+		}
+		.stage .stage1 .right{
+			transform:rotateY(90deg) translateZ(50px);
+		}
+		.stage .stage1 .front{
+			transform:translateZ(50px);
+		}
+		.stage .stage1 .back{
+			transform:rotateY(180deg) translateZ(50px);
+		}
+		
+  </style>
+ </head>
+
+ <body>
+ <div class='stage'>
+	<div class='face top'></div>
+	<div class='face bottom'></div>
+	<div class='face left'></div>
+	<div class='face right'></div>
+	<div class='face front'></div>
+	<div class='face back'></div>
+	<div class='stage1'>
+		<div class='top'></div>
+		<div class='bottom'></div>
+		<div class='left'></div>
+		<div class='right'></div>
+		<div class='front'></div>
+		<div class='back'></div>
+	</div>
+ </div> 
