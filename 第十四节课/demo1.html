@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>作业1</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			perspective:800px;
+		}
+		.stage{
+			position:relative;
+			width:200px;
+			height:200px;
+			margin:300px auto;
+			transform-style:preserve-3d;
+			transition:1s;
+		}
+		.stage:hover{
+			transform:rotateX(360deg) rotateY(360deg);
+		}
+		.stage div{
+			position:absolute;
+			top:0;
+			left:0;
+			width:200px;
+			height:200px;
+			background-image:repeating-linear-gradient(red 0%,red 1%,transparent 1%,transparent 20%),
+			repeating-linear-gradient(90deg,red 0%,red 1%,transparent 1%,transparent 20%);
+			box-shadow:0 0 10px 0 inset;
+			transition:1s;
+			
+		}
+		.stage:hover .top{
+			background-color:#9966ff;
+			box-shadow:0 0 50px #9966ff inset;
+			transform:rotateX(90deg) translateZ(100px);
+		}
+		.stage:hover .bottom{
+			background-color:#ff33ff;
+			box-shadow:0 0 50px #ff33ff inset;
+			transform:rotateX(-90deg) translateZ(100px);
+		}
+		.stage:hover .left{
+			background-color:#00ff33;
+			box-shadow:0 0 50px #00ff33 inset;
+			transform:rotateY(-90deg) translateZ(100px);
+		}
+		.stage:hover .right{
+			background-color:#cc99ff;
+			box-shadow:0 0 50px #cc99ff inset;
+			transform:rotateY(90deg) translateZ(100px);
+		}
+		.stage:hover .front{
+			background-color:#cc66cc;
+			box-shadow:0 0 50px #cc66cc inset;
+			transform:translateZ(100px);
+		}
+		.stage:hover .back{
+			background-color:#12445f;
+			box-shadow:0 0 50px #12445f inset;
+			transform:rotateY(180deg) translateZ(100px);
+		}
+		.stage .top{
+			transform:rotateX(90deg) translateZ(100px);
+			
+		}
+		.stage .bottom{
+			transform:rotateX(-90deg) translateZ(100px);
+		}
+		.stage .left{
+			transform:rotateY(-90deg) translateZ(100px);
+		}
+		.stage .right{
+			transform:rotateY(90deg) translateZ(100px);
+		}
+		.stage .front{
+			transform:translateZ(100px);
+		}
+		.stage .back{
+			transform:rotateY(180deg) translateZ(100px);
+		}
+		
+  </style>
+ </head>
+
+ <body>
+ <div class='stage'>
+	<div class='top'>上</div>
+	<div class='bottom'>下</div>
+	<div class='left'>左</div>
+	<div class='right'>右</div>
+	<div class='front'>前</div>
+	<div class='back'>后</div>
+ </div> 
+ </body>
+</html>
