@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title>作业1</title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.run{
+			
+			width:152px;
+			height:130px;
+			background-color:pink;
+			background-image:url('images/1.png');
+			animation-name:go;
+			animation-duration:.5s;
+			animation-timing-function:steps(7);
+			animation-iteration-count:infinite;
+
+		}
+		@keyframes go{
+			0%{
+				background-position-x:0%;
+			}
+			100%{
+				background-position-x:100%;
+			}
+		}
+		@keyframes move{
+			0%{
+				transform: translateX(100vw);
+			}
+			100%{
+				transform: translateX(-100%);
+			}
+		}
+		.run:active{
+			animation-play-state:paused;
+			background-position-y:130px;
+		}
+		.box {
+			position:absolute;
+			animation:10s move linear infinite;
+		}
+		.box:active{
+			animation-play-state:paused;
+		}
+  </style>
+ </head>
+
+ <body>
+ <div class='box'>
+  <div class='run'></div>
+ </div>
+ </body>
+</html>
