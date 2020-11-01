@@ -18,11 +18,23 @@
 			background-color:pink;
 			background-image:url('images/1.png');
 			animation-name:go;
-			animation-duration:.5s;
+			animation-duration:0.5s;
 			animation-timing-function:steps(7);
 			animation-iteration-count:infinite;
 
 		}
+		.run:active{
+			animation-play-state:paused;
+			background-position-y:130px;
+		}
+		.box {
+			position:absolute;
+			animation:10s move linear infinite;
+		}
+		.box:active{
+			animation-play-state:paused;
+		}
+		
 		@keyframes go{
 			0%{
 				background-position-x:0%;
@@ -38,17 +50,6 @@
 			100%{
 				transform: translateX(-100%);
 			}
-		}
-		.run:active{
-			animation-play-state:paused;
-			background-position-y:130px;
-		}
-		.box {
-			position:absolute;
-			animation:10s move linear infinite;
-		}
-		.box:active{
-			animation-play-state:paused;
 		}
   </style>
  </head>
