@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>01</title>
+<style>
+	*{margin: 0;padding: 0;}
+	.max{
+		width: 100px;
+		height: 100px;
+		background-color:pink;
+	}
+</style>
+</head>
+<body>
+<div id="min" class="max" name='box'>111</div>
+<div id="min" class="max">222</div>
+<div id="min" class="max">333</div>
+<script>
+	/*let a = document.getElementById('min')*/
+	/*let b = document.getElementsByClassName('max');*/
+	/*let a = document.getElementsByTagName('max')*/
+	/*let a = document.getElementsByName('box')	*/
+	let a = document.querySelectorAll('.max')
+		console.log(a.innerHTML);
+	</script>
+</body>
+</html>

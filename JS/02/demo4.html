@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>作业2</title>
+<style>
+	*{margin:0;padding:0;}
+	div{
+		width:300px;
+		line-height:100px;
+		text-align: center;
+		font-size: 30px;
+		margin:40px auto;
+		background-color: pink;
+	}
+</style>
+</head>
+<body>
+<div id="box1">我是wrap1</div>
+<div id="box2">我是wrap2</div>  
+<script>
+	let a = document.getElementById('box1'),
+		b = document.getElementById('box2');
+	a.onmouseenter = function (){
+		b.innerHTML = '鼠标移入wrap1'
+	}
+	a.onmouseout = function (){
+		a.innerHTML = '鼠标离开了wrap2'
+
+	}
+	b.onmouseenter = function (){
+		a.innerHTML = '鼠标移入wrap2'
+	}
+	b.onmouseout = function (){
+		b.innerHTML = '鼠标离开了wrap2'
+		
+	}
+</script>
+</body>
+</html>
