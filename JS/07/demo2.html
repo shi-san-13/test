@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<style>
+	*{margin:0;padding:0;}
+	li{
+		list-style-type: none;
+	}
+	div{
+		position: relative;
+		width: 500px;
+		height: 300px;
+		border:5px solid;
+		margin:50px auto;
+		
+	}
+	ul li img{
+		position: absolute;
+		
+		width: 450px;
+	}
+	.but1{
+		position: absolute;
+		left: 800px;
+		width: 100px;
+		height: 50px;
+		font-size: 20px;
+		color: white;
+		background-color:black;
+	}
+	.but2{
+		position: absolute;
+		left: 1000px;
+		width: 100px;
+		height: 50px;
+		font-size: 20px;
+		color: white;
+		background-color:black;
+</style>
+</head>
+<body>
+<div>
+	<ul id = "num">
+		<li class="box1">
+			<img src="images/1.jpg" alt="">
+		</li>
+		<li class="box2">
+			<img src="images/2.jpg" alt="">
+		</li>
+		<li class="box3">
+			<img src="images/3.jpg" alt="">
+		</li>
+		<li class="box4">
+			<img src="images/4.jpg" alt="">
+		</li>
+	</ul>
+</div>
+<button class="but1">单边模式</button>
+<button class="but2">循环模式</button>
+<script>
+	let oBut1 = document.getElementsByClassName('but1')[0],
+		oBut2 = document.getElementsByClassName('but2')[0],
+		oLi = document.getElementsByTagName('li'),
+		len = oLi.length;
+	for(let i = 0 ; i < len; i++){
+		oLi[i].onclick.function(){
+			oLi.style.img = 'display = none';
+		}
+	}
+</script>
+</body>
+</html>
