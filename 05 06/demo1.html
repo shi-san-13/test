@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>作业1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        ul li {
+            list-style-type: none;
+        }
+        
+        ul li p {
+            float: left;
+            width: 100px;
+            height: 50px;
+            border: 2px solid;
+            margin: 10px 10px;
+        }
+        /*button{
+		width: 200px;
+		height: 100px;
+		font-size: 20px;
+	}*/
+    </style>
+</head>
+
+<body>
+    <ul>
+    </ul>
+    <!-- <div>
+	<button class="box">九九乘法表</button>
+</div> -->
+    <script>
+        let aUl = document.getElementsByTagName('ul')[0],
+            str1 = '';
+        for (let i = 1; i <= 9; i++) {
+            let str2 = '';
+            for (let j = 1; j <= i; j++) {
+                str2 += `<p>${i}*${j}=${i*j}</p>`;
+            };
+            str1 += `<li>${str2}</li>`;
+        };
+
+        aUl.innerHTML = str1;
+
+
+
+
+
+
+
+
+
+        // let aUl = document.getElementsByTagName('ul')[0],
+        //     str1 = '';
+        // for (let i = 1; i <= 9; i++) {
+        //     let str2 = '';
+        //     for (let j = 1; j <= i; j++) {
+        //         str2 += `<p>${i}*${j}=${i*j}</p>`;
+        //     }
+        //     str1 += `<li>${str2}</li>`;
+        // }
+        /*str1 += '</br>';
+        for(let i = 1; i <= 9; i++){
+        	let str2 = '';
+        	for(let j = i; j <= 9; j++){
+        		str2 += `<p>${i}*${j}=${i*j}</p>`;
+        	}
+        	str1 += `<li>${str2}</li>`;
+        }*/
+        // aUl.innerHTML = str1;
+    </script>
+</body>
+
+</html>

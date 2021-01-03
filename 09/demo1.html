@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 400px;
+            height: 500px;
+            margin: 50px auto;
+            border: 1px solid black;
+        }
+        
+        li {
+            list-style-type: none;
+            height: 50px;
+        }
+        
+        li:nth-child(even) {
+            background-color: darkgray;
+        }
+        
+        input {
+            margin: 20px;
+        }
+        
+        label {
+            font-size: 20px;
+        }
+        
+        .but1 {
+            width: 100px;
+            height: 40px;
+            margin: 10px;
+            background-color: darkgray;
+        }
+        
+        .but2 {
+            width: 100px;
+            height: 40px;
+            margin: 10px;
+            background-color: rgb(233, 38, 38);
+        }
+        
+        .but3 {
+            width: 100px;
+            height: 40px;
+            margin: 10px;
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <input type="checkbox" checked=false><label>01</label>
+            </li>
+            <li>
+                <input type="checkbox"><label>02</label>
+            </li>
+            <li>
+                <input type="checkbox"><label>03</label>
+            </li>
+            <li>
+                <input type="checkbox"><label>04</label>
+            </li>
+            <li>
+                <input type="checkbox"><label>05</label>
+            </li>
+            <li>
+                <input type="checkbox"><label>06</label>
+            </li>
+            <li>
+                <input type="checkbox"><label>07</label>
+            </li>
+            <li>
+                <input type="checkbox"><label>08</label>
+            </li>
+            <button class="but1">全选</button>
+            <button class="but2">全不选</button>
+            <button class="but3">反选</button>
+        </ul>
+    </div>
+    <script>
+        let oBut1 = document.getElementsByClassName('but1'),
+            oBut2 = document.getElementsByClassName('but2'),
+            oBut3 = document.getElementsByClassName('but3'),
+            aLi = document.getElementsByTagName('li'),
+            aIn = document.getElementsByTagName('input'),
+            len = aLi.length;
+        oBut1.onclick = function() {
+            for (let i = 0; i < len; i++) {
+                aLi[i].onclick = function() {
+                    // aIn(i).
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

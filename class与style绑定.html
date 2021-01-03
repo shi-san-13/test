@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            font-size: 30px;
+        }
+        
+        .text1 {
+            background-color: red;
+            color: white;
+        }
+        
+        .text {
+            background-color: pink;
+            color: white;
+        }
+        
+        .num {
+            font-size: 50px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="static" :class="{ active: isActive, 'text-danger': hasError }"></div>
+        <!-- <div v-bind:class="[text ? 'text' : '']">111</div>
+        <div :style="{color : color , fontSize:size + 'px' ,
+         backgroundColor : isRed ? '#fff000' : ''}">222</div> -->
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                isActive: true,
+                hasError: false
+                    // text: true,
+                    // num: true,
+                    // color: '#000000',
+                    // size: 50,
+                    // isRed: true
+            }
+        })
+    </script>
+</body>
+
+</html>

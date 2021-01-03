@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: purple;
+        }
+        
+        input:checked+label {
+            background-color: pink;
+        }
+        
+        input[type=radio] {
+            display: none;
+        }
+        
+        div {
+            width: 400px;
+            height: 400px;
+            border: 1px solid;
+            outline-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="radio" name="sex" id="box1"><label for="box1"></label>
+        <input type="radio" name="sex" id="box2"><label for="box2"></label>
+        <input type="radio" name="sex" id="box3"><label for="box3"></label>
+    </form>
+    <div contenteditable=""></div>
+    <script>
+        if (3 > 2) {
+            return true;
+        } else {
+            return fasle;
+        }
+    </script>
+</body>
+
+</html>

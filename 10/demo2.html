@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        
+        table {
+            width: 1000px;
+            margin: 30px auto;
+            border-collapse: collapse;
+        }
+        
+        table td,
+        th {
+            width: 25%;
+            padding: 20px 0;
+            border-bottom: 1px solid red;
+            text-align: center;
+        }
+        
+        table td button {
+            width: 60px;
+            height: 30px;
+            vertical-align: middle;
+        }
+        
+        img {
+            width: 10%;
+        }
+        
+        table td .num {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            border-bottom: 1px solid red;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+        
+        .price .subtotal .sum .total {
+            color: red;
+            font-size: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="shop-cart">
+        <thead>
+            <th>商品</th>
+            <th>单机</th>
+            <th>数量</th>
+            <th>小计</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="images/1.png" alt=""></td>
+                <td><span class="price">10</span></td>
+                <td>
+                    <button class="minus">-</button>
+                    <span class="num">0</span>
+                    <button class="minus">+</button>
+                </td>
+                <td><span class="subtotal">0</span></td>
+            </tr>
+            <tr>
+                <td><img src="images/1.png" alt=""></td>
+                <td><span class="price">30</span></td>
+                <td>
+                    <button class="minus">-</button>
+                    <span class="num">0</span>
+                    <button class="minus">+</button>
+                </td>
+                <td><span class="subtotal">0</span></td>
+            </tr>
+            <tr>
+                <td><img src="images/1.png" alt=""></td>
+                <td><span class="price">40</span></td>
+                <td>
+                    <button class="minus">-</button>
+                    <span class="num">0</span>
+                    <button class="minus">+</button>
+                </td>
+                <td><span class="subtotal">0</span></td>
+            </tr>
+            <tr>
+                <td><img src="images/1.png" alt=""></td>
+                <td><span class="price">50</span></td>
+                <td>
+                    <button class="minus">-</button>
+                    <span class="num">0</span>
+                    <button class="minus">+</button>
+                </td>
+                <td><span class="subtotal">0</span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td>已选购<span class="sum">0</span></td>
+                <td>总价<span class="total">0</span>￥</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        let oShop = document.getElementById('shop-cart'),
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>作业2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        
+        ul {
+            width: 300px;
+            height: 50px;
+        }
+        
+        ul li {
+            overflow: hidden;
+            height: 25px;
+        }
+        
+        ul li p {
+            border-bottom: 1px solid;
+            background-color: yellow;
+        }
+        
+        ul li .max {
+            font-size: 20px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <p class="max">1点击</p>
+                <p>HHH</p>
+                <p>HHH</p>
+                <p>HHH</p>
+            </li>
+            <li>
+                <p class="max">2点击</p>
+                <p>HHH</p>
+                <p>HHH</p>
+                <p>HHH</p>
+            </li>
+            <li>
+                <p class="max">3点击</p>
+                <p>HHH</p>
+                <p>HHH</p>
+                <p>HHH</p>
+            </li>
+            <li>
+                <p class="max">4点击</p>
+                <p>HHH</p>
+                <p>HHH</p>
+                <p>HHH</p>
+            </li>
+        </ul>
+    </div>
+    <script>
+        // let aLi = document.getElementsByTagName('li'),
+        // 	aMax = document.getElementsByClassName('max'),
+        // 	len = aLi.length;
+        // 	aLi[0].bool = true;
+        // 	aLi[1].bool = true;
+        // 	aLi[2].bool = true;
+        // 	aLi[3].bool = true;
+        // for(let i = 0; i < len; i++){
+        // 	aMax[i].onclick = function(){
+        // 		if(aLi[i].bool){
+        // 			aLi[i].style.height = 'auto';
+        // 			aLi[i].bool = false;
+        // 		}else{
+        // 			aLi[i].style.height = '25px';
+        // 			aLi[i].bool = true;
+        // 		}
+
+
+        // 	}
+        // }
+        //方法一
+        // let aMax = document.getElementsByClassName('max'),
+        //     oLi = document.getElementsByTagName('li'),
+        //     len = oLi.length;
+        // for (let i = 0; i < len; i++) {
+        //     aMax[i].onclick = function() {
+        //         for (let j = 0; j < len; j++) {
+        //             oLi[j].style.height = '25px';
+        //         }
+        //         oLi[i].style.height = 'auto';
+        //         console.log(oLi);
+        //     }
+
+
+        // }
+        //方法二
+        let aMax = document.getElementsByClassName('max'),
+            oLi = document.getElementsByTagName('li'),
+            len = oLi.length,
+            inster;
+        for (let i = 0; i < len; i++) {
+            aMax[i].onclick = function() {
+                if (inster !== undefined) {
+                    oLi[inster].style.height = '25px';
+                }
+                inster = i;
+                oLi[i].style.height = 'auto';
+            }
+        }
+        /*let aMax = document.getElementsByClassName('max'),
+        	aLi = document.getElementsByTagName('li'),
+        	len = aLi.length;
+        for(let i = 0; i < len; i++){
+        	aMax[i].box = true;
+        	aMax[i].onclick = function(){
+        		if(aMax[i].box){
+        			aLi[i].style.height = 'auto';
+        			aMax[i].box = false;
+        		}else{
+        			aLi[i].style.height = '25px';
+        			aMax[i].box = true;
+        		}
+        		
+        	}
+        }*/
+        /*let max = document.getElementsByClassName('max'),
+        	aLi = document.getElementsByTagName('li'),
+        	box = true;
+        max[0].onclick = function(){
+        	if (box) {
+        		aLi[0].style.height = 'auto';
+        		aLi[1].style.height = '25px';
+        		aLi[2].style.height = '25px';
+        		aLi[3].style.height = '25px';
+        		box = false;
+        	}else{
+        		aLi[0].style.height = '25px';
+        		box = true;
+        	}
+        	
+        }
+        max[1].onclick = function(){
+        	if (box) {
+        		aLi[0].style.height = '25px';
+        		aLi[1].style.height = 'auto';
+        		aLi[2].style.height = '25px';
+        		aLi[3].style.height = '25px';
+        		box = false;
+        	}else{
+        		aLi[1].style.height = '25px';
+        		box = true;
+        	}
+        	
+        }
+        max[2].onclick = function(){
+        	if (box) {
+        		aLi[0].style.height = '25px';
+        		aLi[1].style.height = '25px';
+        		aLi[2].style.height = 'auto';
+        		aLi[3].style.height = '25px';
+        		box = false;
+        	}else{
+        		aLi[2].style.height = '25px';
+        		box = true;
+        	}
+        	
+        }
+        max[3].onclick = function(){
+        	if (box) {
+        		aLi[0].style.height = '25px';
+        		aLi[1].style.height = '25px';
+        		aLi[2].style.height = '25px';
+        		aLi[3].style.height = 'auto';
+        		box = false;
+        	}else{
+        		aLi[3].style.height = '25px';
+        		box = true;
+        	}
+        	
+        }*/
+    </script>
+</body>
+
+</html>

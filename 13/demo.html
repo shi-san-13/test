@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 400px;
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        function fn1() {
+            var num = 2;
+
+            function fn2() {
+                num++;
+                console.log(num)
+            }
+            return fn2;
+        }
+        fn1()();
+        var fn3 = fn1();
+        fn3();
+
+        var num = document.getElementsByTagName('div')[0];
+
+        num.onclick = function() {
+            var num1 = 1;
+
+            function fn() {
+                num1++;
+                console.log(num1);
+            }
+            return fn;
+        }()
+        console.log(window);
+    </script>
+</body>
+
+</html>

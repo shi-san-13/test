@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Examples</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 100px;
+            height: 50px;
+            margin: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box" style="width: 20px;"></div>
+    <!-- <div>111</div> -->
+    <script>
+        /*let style = document.getElementsByTagName('style')[0];*/
+        let aBox = document.getElementById('box');
+        aBox.onclick = function() {
+            aBox.style.cssText = 'width:200px;height:100px;'
+        }
+
+        /*for(let i = 0; i < 10; i++){
+        	console.log(i);
+        }*/
+        /*let oDiv = document.getElementsByTagName('div')[0];
+        oDiv.style.height = '500px';
+        oDiv.style.width = '400px';*/
+        /*let arr = ["10", 3, true, function(){}],
+        	len = arr.length;
+        for(let i = 0; i < len; i++){
+        	console.log(arr[i]);
+        }
+        */
+        let fn = {
+            num: 20,
+            str: '2'
+
+        }
+        console.log(fn.num);
+    </script>
+</body>
+
+</html>

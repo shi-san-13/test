@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #ward {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 50px auto;
+            border: 1px solid;
+        }
+        
+        #ward div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ward">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+        let oWard = document.getElementById('ward'),
+            aDiv = document.getElementsByTagName('div'),
+            len = aDiv.length,
+            deg = 0,
+            index = 0;
+        for (let i = 0; i < len; i++) {
+            deg += 18;
+            let x = 250 + 250 * Math.cos(deg * Math.PI / 180);
+            let y = 250 + 250 * Math.sin(deg * Math.PI / 180);
+            aDiv[i].style.top = y + 'px';
+            aDiv[i].style.left = x + 'px';
+
+        }
+        // setInterval(function() {
+
+        //     if (index <= 20) {
+        //         deg += 18;
+        //         let x = 250 + 250 * Math.cos(deg * Math.PI / 180) - 10;
+        //         let y = 250 + 250 * Math.sin(deg * Math.PI / 180) - 10;
+        //         aDiv[index].style.top = y + 'px';
+        //         aDiv[index].style.left = x + 'px';
+        //         index++;
+        //     }
+
+        // }, 100)
+
+        // function fn() {
+        //     console.log(10);
+
+        // }
+        // let timer1 = setInterval(fn, 1000)
+
+
+        // let timer = setInterval(function() {
+        //     console.log(10);
+        // }, 1000)
+
+        // clearInterval(1);
+    </script>
+</body>
+
+</html>

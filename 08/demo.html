@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Examples</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            border: 1px solid pink;
+            background-color: #0f0;
+        }
+        
+        .num {
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            background-color: #0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="num">1</div>
+    <div class="num">2</div>
+    <div class="num">3</div>
+    <div class="num">4</div>
+    <script>
+        // let num = 123;
+
+        // function fn() {
+        //     console.log(num);
+        // }
+        // fn();
+        // let oBox = document.getElementsByClassName('box');
+        // let oNum = document.getElementsByClassName('num');
+        // for (let i = 0; i < 4; i++) {
+        //     oBox[i].onclick = function() {
+        //         console.log(i);
+        //     }
+        // }
+        // for (var i = 0; i < 4; i++) {
+        //     oNum[i].index = i;
+        //     oNum[i].onclick = function() {
+        //         console.log(this.index);
+        //     }
+        // }
+        let oBox = document.getElementsByClassName('box')[0];
+        // oBox.classList.add('num');
+        // oBox.classList.remove('box');
+        // oBox.classList.toggle('wark');
+        // oBox.classList.contains('num');
+        // let oBox = document.getElementById('box');
+        console.log(oBox.currentStyle.width);
+        // console.log(getComputedStyle(oBox).height);
+        // var oBox = document.getElementById('box');
+
+        // function getStyle(oBox) {
+        //     return oBox.currentStyle || getComputedStyle(oBox);
+        // }
+        // var style = getStyle(oBox);
+        // console.log(style.height);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        {{a}}
+    </div>
+    <script>
+        var data = {
+            a: 2,
+            b: 3
+        }
+        var vm = new Vue({
+                el: '#app',
+                data: data,
+
+                beforeCreate: function() {
+                    // `this` 指向 vm 实例
+                    console.log('a is: ' + this.a)
+                    console.log(this);
+
+                },
+
+                // methods: {
+                //     ttt() {
+                //         this.a++
+                //             console.log(this.a);
+
+                //     }
+                // }
+            })
+            // setInterval(function() {
+            //     vm.$data = '4'
+
+        // }, 3000)
+    </script>
+</body>
+
+</html>

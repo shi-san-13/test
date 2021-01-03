@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="time"></div>
+    <script>
+        let time = document.getElementById('time'),
+            newyear = new Date('2021 / 2 / 12');
+        setInterval(() => {
+            let date = newyear - new Date(),
+                dd = Math.floor(date / 1000 / 60 / 60 / 24),
+                hh = Math.floor(date / 1000 / 60 / 60) % 24,
+                mm = Math.floor(date / 1000 / 60) % 60,
+                ss = Math.floor(date / 1000) % 60;
+            time.innerHTML = `<span>${addZero(dd)}天${addZero(hh)}时
+                ${addZero(mm)}分${addZero(ss)}秒</span>`;
+            // console.log(Date.now());
+
+        }, 1000);
+
+        function addZero(n) {
+            return n < 10 ? '0' + n : n + '';
+        }
+    </script>
+</body>
+
+</html>

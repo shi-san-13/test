@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>案例</title>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	div{
+		width: 200px;
+		height: 200px;
+		margin:50px auto ;
+		background-color: #ff0;
+	}
+	div ul{
+		position: absolute;
+		top:80px;
+		left:800px;
+		margin-left:300px;
+		list-style-type: none;
+	}
+	ul li{
+		width: 100px;
+		line-height: 40px;
+		text-align:center;
+		font-size: 20px;
+		margin-top: 5px;
+		border: 1px solid;
+	}
+	/*}
+	.red{
+		background-color: red;
+	}
+	.blue{
+		background-color: blue
+	}*/
+</style>
+</head>
+<body>
+<div>
+	<div class="box"></div>
+	<ul>
+		<li>红色</li>
+		<li>黄色</li>
+		<li>黑色</li>
+	</ul>
+</div>
+<script>
+	let aLi = document.getElementsByTagName('li'),
+		oDiv = document.getElementsByClassName('box');
+		len = aLi.length;
+	for(let i = 0; i < len; i++){
+		aLi[i].onclick = function(){
+			switch (aLi[i]) {
+				case oDiv[0]:
+					oDiv[0].style.backgroundColor = 'red';
+					break;
+				case oDiv[1]:
+					oDiv[1].style.backgroundColor = 'yellow';
+					break;
+				case oDiv[2]:
+					oDiv[2].style.backgroundColor = 'black';
+					break;
+				}
+			}
+		}
+	/*let box = document.getElementsByClassName('box')[0];
+	let li = document.getElementsByTagName('li');
+	li[0].onclick = function (){
+		box.style.backgroundColor = 'red';
+	}
+	li[1].onclick = function (){
+		box.style.backgroundColor = 'yellow';
+	}
+	li[2].onclick = function (){
+		box.style.backgroundColor = 'black';
+	}*/
+	/*let a = document.getElementById('all');
+	document.body.onclick = function(){
+		a.className = 'red';
+	}*/
+	/*let a = document.getElementsByTagName('li');
+	let b = document.getElementsByClassName('box')[0];
+	a[0].onclick = function(){
+		b.style.backgroundColor = 'red';
+	}
+	a[1].onclick = function(){
+		b.style.backgroundColor = 'yellow';
+	}
+	a[2].onclick = function(){
+		b.style.backgroundColor = 'black';
+	}*/
+	
+</script>
+</body>
+</html>

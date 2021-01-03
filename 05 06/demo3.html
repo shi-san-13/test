@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Examples</title>
+    <style>
+        .num {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <ul id="num">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <script>
+        // let oBox = document.getElementsByTagName('div')[0];
+        // oBox.onclick = function() {
+        //         this.className = 'num';
+        //     }
+        let oBox = document.getElementsByClassName('box');
+        console.log(oBox);
+        oBox[0].className = 'num';
+        console.log(oBox);
+
+        // let oId = document.getElementById('num');
+        // console.log(oId);
+        // oId.id = 'num1';
+        // console.log(oId);
+        // oId.id = 'num2';
+        // console.log(oId);
+
+
+        let num = {
+            fn: function() {
+
+            }
+        }
+        console.log(this);
+
+
+        //
+    </script>
+</body>
+
+</html>

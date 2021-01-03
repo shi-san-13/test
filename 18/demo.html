@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #wrap {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap"></div>
+    <script>
+        // 元素对象
+        // 属性
+        // 目标
+        // 步长
+
+        var oWrap = document.getElementById('wrap');
+        animetion(oWrap, 'width', 800, 2000);
+
+        function animetion(ele, attr, target, time) {
+            var startValue = parseFloat(getStyle(ele)[attr]), //初始值
+                distance = target - startValue, //总距离
+                startTime = new Date(); //起初时间
+            function running() {
+                var nowTime = new Date() - startTime, //当经过的时间
+                    prop = nowTime / time; //时间比例
+                if (prop >= 1) {
+                    prop = 1
+                } else {
+                    requestAnimationFrame(running)
+                }
+
+                ele.style[attr] = prop * distance + startValue + 'px';
+            }
+            requestAnimationFrame(running)
+
+        }
+
+
+        function getStyle(ele) {
+            return ele.currentStyle || getComputedStyle(ele);
+        }
+    </script>
+</body>
+
+</html>
