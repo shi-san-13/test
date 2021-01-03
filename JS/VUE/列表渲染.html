@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <ul id="example-1">
+        <!-- <li v-for="item,name in items">
+            {{name}} {{item.message}}
+        </li>  -->
+        <li v-for="n in evenNumbers">{{ n }}</li>
+    </ul>
+    <!-- <ul id="example-2">
+        <li v-for="item in item">
+            {{parentMessage}}—{{item.messages}}
+
+        </li>
+    </ul> -->
+    <!-- <ul id="v-for-object" class="demo">
+        <li v-for="value,name,index in object">
+            {{name}} {{index}} {{ value }}
+        </li>
+    </ul> -->
+
+    <script>
+        var example1 = new Vue({
+                data: {
+                    numbers: [1, 2, 3, 4, 5]
+                },
+                computed: {
+                    evenNumbers: function() {
+                        return this.numbers.filter(function(number) {
+                            return number % 2 === 0
+                        })
+                    }
+                }
+            })
+            // var example2 = new Vue({
+            //     el: '#example-2',
+            //     data: {
+            //         parentMessage: 'Parent',
+            //         item: [{
+            //             messages: 'Foo'
+            //         }, {
+            //             messages: 'Bar'
+            //         }]
+            //     }
+            // })
+            // var vm = new Vue({
+            //     el: '#v-for-object',
+            //     data: {
+            //         object: {
+            //             title: 'How to do lists in Vue',
+            //             author: 'Jane Doe',
+            //             publishedAt: '2016-04-10'
+            //         }
+            //     }
+            // })
+    </script>
+</body>
+
+</html>

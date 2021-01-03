@@ -48,7 +48,25 @@
 	</ul>
 </div>
 <script>
-	let box = document.getElementsByClassName('box')[0];
+	let aLi = document.getElementsByTagName('li'),
+		oDiv = document.getElementsByClassName('box');
+		len = aLi.length;
+	for(let i = 0; i < len; i++){
+		aLi[i].onclick = function(){
+			switch (aLi[i]) {
+				case oDiv[0]:
+					oDiv[0].style.backgroundColor = 'red';
+					break;
+				case oDiv[1]:
+					oDiv[1].style.backgroundColor = 'yellow';
+					break;
+				case oDiv[2]:
+					oDiv[2].style.backgroundColor = 'black';
+					break;
+				}
+			}
+		}
+	/*let box = document.getElementsByClassName('box')[0];
 	let li = document.getElementsByTagName('li');
 	li[0].onclick = function (){
 		box.style.backgroundColor = 'red';
@@ -58,7 +76,7 @@
 	}
 	li[2].onclick = function (){
 		box.style.backgroundColor = 'black';
-	}
+	}*/
 	/*let a = document.getElementById('all');
 	document.body.onclick = function(){
 		a.className = 'red';

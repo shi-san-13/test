@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p v-if="seen">现在你看到我了</p>
+        <a v-bind:href="url">...</a>
+        <div @click="click1">
+            <div @click.stop="click2">
+                32131
+            </div>
+        </div>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                seen: true,
+                url: "https://www.shiguangkey.com/"
+            },
+            methods: {
+                click1: function() {
+                    console.log('click1...');
+                },
+                click2: function() {
+                    console.log('click2...');
+
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>

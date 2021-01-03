@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- <div id="app">
+        <div v-if="type === 'A'">
+            😢
+        </div>
+        <div v-else if="type === 'B'">
+            False
+        </div>
+        <h1 v-bind:class="OK">ok</h1>
+    </div> -->
+    <template v-if="loginType === 'username'">
+        <label>Username</label>
+        <input placeholder="Enter your username">
+      </template>
+    <template v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address">
+      </template>
+    <script>
+        // var vm = new Vue({
+        //     el: '#app',
+        //     data: {
+        //         type: 'A',
+        //         OK: true
+
+        //     }
+        // })
+    </script>
+</body>
+
+</html>

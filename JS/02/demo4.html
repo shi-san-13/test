@@ -16,10 +16,19 @@
 </style>
 </head>
 <body>
-<div id="box1">我是wrap1</div>
-<div id="box2">我是wrap2</div>  
+<div>我是wrap1</div>
+<div>我是wrap2</div>  
 <script>
-	let a = document.getElementById('box1'),
+	let aDiv1 = document.getElementsByTagName('div')[0],
+		aDiv2 = document.getElementsByTagName('div')[1];
+		tit = true;
+	aDiv1.onmouseenter = function(){
+		aDiv1.innerHTML = '鼠标移入wrap1';		
+	}
+	aDiv1.onmouseout = function(){
+		aDiv2.innerHTML = '鼠标移出wrap1';
+	}
+	/*let a = document.getElementById('box1'),
 		b = document.getElementById('box2');
 	a.onmouseenter = function (){
 		b.innerHTML = '鼠标移入wrap1'
@@ -34,7 +43,7 @@
 	b.onmouseout = function (){
 		b.innerHTML = '鼠标离开了wrap2'
 		
-	}
+	}*/
 </script>
 </body>
 </html>

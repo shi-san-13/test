@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>demo</title>
-<style>
-	*{margin:0;padding:0;}
-	#box{
-		width:400px;
-		height:200px;
-		font-size:20px;
-		color:green;
-		background-color:pink;
-	}
-</style>
-<body>
-	<div id="box" class="word">11111</div>
-	<script>
-		document.getElementById('box').onclick = function(){
-			console.log('1');
-		
-		document.getElementById("box").innerHTML = "<p>1231232131</p>";
-		/*document.getElementById("box").title = "111";
-		document.getElementById("box").className = document.getElementById("box").className + "222";
-		console.log(document.getElementById("box").className);*/
-		}
-		/*var abc = document.getElementById("box");
-		abc.onclick = function(){
-			abc.title = "222"
-			abc.className = "3333"
-			abc.innerHTML = "<p>323232332</p>"
-		}*/
-		
-	</script>
-</body>
+    <meta charset="utf-8">
+    <title>demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #box {
+            width: 400px;
+            height: 200px;
+            font-size: 20px;
+            color: green;
+            background-color: pink;
+        }
+    </style>
+
+    <body>
+        <div id="box" class="word">11111</div>
+        <script>
+            document.getElementById('box').onclick = function() {
+                    console.log('1');
+
+                    document.getElementById("box").innerHTML = "<p>1231232131</p>";
+                    /*document.getElementById("box").title = "111";
+                    document.getElementById("box").className = document.getElementById("box").className + "222";
+                    console.log(document.getElementById("box").className);*/
+                }
+                // var abc = document.getElementById("box");
+                // abc.onclick = function() {
+                //     abc.title = "222"
+                //     abc.className = "3333"
+                //     abc.innerHTML = "<p>323232332</p>"
+                // }
+        </script>
+    </body>
+
 </html>

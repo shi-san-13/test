@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #round {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            border: 1px solid;
+            border-radius: 50%;
+        }
+        
+        #round div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 50%;
+        }
+        
+        #round .box {
+            widows: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='round'>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        (function() {
+            let aDiv = document.getElementsByTagName('div'),
+                oDiv = document.getElementsByClassName('box')[0],
+                deg = 0,
+                index = 0;
+
+
+            function fn() {
+                let x = 400 + 400 * Math.sin(deg * Math.PI / 180) - 25;
+                let y = 400 + 400 * Math.cos(deg * Math.PI / 180) - 25;
+                oDiv.style.top = y + 'px';
+                oDiv.style.left = x + 'px';
+                if (deg % 10 === 0) {
+
+                    index %= aDiv.length;
+                    console.log(index);
+
+                    // aDiv[index].style.top = y + 'px';
+                    // aDiv[index].style.left = x + 'px';
+                    index++;
+                }
+                deg++;
+            }
+            setInterval(fn, 100)
+        }())
+    </script>
+</body>
+
+</html>

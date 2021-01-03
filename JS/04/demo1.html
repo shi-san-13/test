@@ -9,10 +9,11 @@
 		padding:0;
 	}
 	div{
-		width:500px;
+		width:550px;
 		height:180px;
 		margin:50px auto;
 		border:1px solid; 
+		box-shadow: 0px 0px 10px 1px inset;
 	}
 	input{
 		position: relative;
@@ -20,38 +21,43 @@
 		height:100px;
 		font-size: 50px;
 		margin:40px 30px;
+
 	}
 	button{
-		width: 100px;
-		height: 50px;
-		position: absolute;
-		left: 1100px;
-		bottom: 325px;
+		width: 70px;
+		height: 60px;
+		border-radius: 20px 20px 20px 20px;
+		background-color:#fff;
 	}
 	ul{
 		list-style-type: none;
 	}
 	li{
-		
 		border-bottom: 1px solid;
-		
 	}
 </style>
 </head>
 <body>
 <div>
-	<input type="text"><br>
+	<input type="text">
 	<button>发送信息</button>
+	<button>清除</button>
 	<ul>
 	</ul>
 </div>
 <script>
-	let oInput = document.getElementsByTagName('input'),
+	let oInput = document.getElementsByTagName('input')[0],
 		oButton = document.getElementsByTagName('button'),
-		oUl = document.getElementsByTagName('ul');
-	oButton[0].onclick = function(){
-		oUl[0].innerHTML += '<li>' + oInput[0].value  + '</li>'
-	}
+		oUl = document.getElementsByTagName('ul')[0];
+		oButton[0].onclick = function(){
+			if(oInput.value){
+					oUl.innerHTML += `<li>${oInput.value}</li>`
+			}
+		
+		}
+		oButton[1].onclick = function(){
+			oUl.innerHTML = '';
+		}
 </script>
 </body>
 </html>

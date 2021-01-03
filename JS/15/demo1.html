@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #tit {
+            width: 850px;
+            height: 260px;
+            border: 1px solid;
+        }
+        
+        #tit div {
+            float: left;
+            width: 100px;
+            height: 30px;
+            font-size: 15px;
+            background-color: pink;
+            border: 1px solid;
+        }
+        
+        #tit div.box {
+            background-color: red;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="tit">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <script>
+        (function() {
+            // let oTit = document.getElementById('tit'),
+            //     aDiv = document.getElementsByTagName('div'),
+            //     len = aDiv.length,
+            //     n = 0;
+            // let num = setInterval(fn, 100);
+
+            // function fn() {
+            //     if (n < len - 1) {
+            //         n++;
+            //         aDiv[n].className = 'box';
+            //         const color = `rgb(${Math.random()*255|0},${Math.random()*255|0},${Math.random()*255|0})`
+            //         aDiv[n].style.backgroundColor = color;
+            //         aDiv[n].innerHTML = color;
+            //     } else {
+            //         clearInterval(num);
+            //     }
+
+            // }
+
+            let oTit = document.getElementById('tit'),
+                len = 50,
+                num = 0;
+            for (let i = 0; i < len; i++) {
+                oTit.innerHTML += div;
+            }
+            let r = parseInt(Math.random() * 256)
+
+
+            // function fn() {
+            //     if (++num === len) {
+
+            //     } else {
+            //         num++;
+            //        oTit.style.display = block;
+            //     }
+            // }
+            // let timer = setInterval(fn, 1000);
+        }())
+    </script>
+</body>
+
+</html>

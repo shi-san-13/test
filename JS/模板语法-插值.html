@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .blue {
+            color: rgb(38, 102, 161);
+            font-size: 50px;
+        }
+        
+        .red {
+            color: blue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="app" v-once>
+
+        <p>Using mustaches: {{ rawHtml }}</p>
+        <p v-html="rawHtml"></p>
+        <p :class="size">23874</p>
+        <p>{{msg + 1}}</p>
+        <p> {{ 3 > 2 ? 'YES' : 'NO' }} </p>
+        <p> {{ num.split('').reverse().join('')}} </p>
+
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                msg: 10,
+                rawHtml: '<span style="color:red">this is should be red</span>',
+                num: 'sajdasd',
+                size: 'red'
+            }
+        });
+        console.log(app.msg);
+        app.msg = 'how';
+    </script>
+</body>
+
+
+</html>

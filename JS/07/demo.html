@@ -1,45 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Examples</title>
-<style>
-	*{margin: 0;padding: 0;}
-</style>
+    <meta charset="utf-8">
+    <title>Examples</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
+
 <body>
-<script>
-	/*let num1 = 10,
-		num2 = 7;
-	if(num1>num2){
-		console.log('大于');
-	}
-	num1<num2 || console.log('大于')*/
-	function fn1(){
-		for(let i = 0; i < arguments.length; i++){
-			console.log(arguments[i]);
-		}
-	}
-	fn1(1,2,5,6,7,8)
-	function fn2(num1){
-		console.log(num1);
-	}
-	fn2(1);
-/*	document.documentElement.onclick = fn;*/
-	/*function fn(a,b){
-		return a + b;
-	}
-	console.log(fn(1,2));
-	console.log(fn(3,4));*/
-	/*function fn(){
-		for(let i = 0; i < arguments.length; i++){
-			console.log(arguments[i]);
-		}
-	}
-	fn(1,2,3,4,5);
-	fn(1,2,3);*/
-	
-</script>
-    
+    <script>
+        'use strict'
+        let num1 = 10,
+            num2 = 7;
+        if (num1 > num2) {
+            console.log('大于');
+        }
+        num1 < num2 || console.log('大于')
+            // function fn1(num, num1, num2) {
+            //     for (let i = 0; i < arguments.length; i++) {
+            //         console.log(arguments[i]);
+            //     }
+            // }
+            // fn1(1, 2, 5, 6, 7, 8);
+
+        // function fn2(num1) {
+        //     console.log(num1);
+        // }
+        // fn2(1);
+        /*	document.documentElement.onclick = fn;*/
+        /*function fn(a,b){
+        	return a + b;
+        }
+        console.log(fn(1,2));
+        console.log(fn(3,4));*/
+        function fn() {
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+        }
+        fn(1, 2, 3, 4, 5);
+        fn(1, 2, 3);
+    </script>
+
 </body>
+
 </html>

@@ -24,7 +24,19 @@
 	<img src="images/2.png">
 </div> -->
 <script>	
-	let oDiv =document.getElementsByTagName('div')[0];
+	let oDiv = document.getElementsByTagName('div')[0];
+		tit = true;
+		oDiv.onclick = function(){
+		if(tit){
+			oDiv.style.backgroundImage = 'url(images/2.png)';
+			tit = false
+		}else{
+			oDiv.style.backgroundImage = 'url(images/1.png)';
+			tit = true;
+			}
+		}
+		
+	/*let oDiv =document.getElementsByTagName('div')[0];
 	oImg = true
 	oDiv.onclick = function (){
 			if(oImg){
@@ -34,7 +46,7 @@
 				oDiv.style.backgroundImage = 'url(images/1.png)'
 				oImg = true;
 			}	
-	}
+	}*/
 	
 	/*let a = document.getElementById('box1');
 	let b = document.getElementById('box2');
